@@ -22,14 +22,14 @@ To get started, it's recommended to set up a virtual environment and install the
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your_username/Pycamp.git
+    git clone https://github.com/ascendantaditya/Pycamp.git
     cd Pycamp
     ```
 
 2. Create a virtual environment:
 
     ```bash
-    python -m venv venv
+    python -m venv .venv
     ```
 
 3. Activate the virtual environment:
@@ -84,7 +84,7 @@ Make sure to install these dependencies in your virtual environment as described
 
 ## Contributing
 
-If you find any issues, have suggestions, or want to contribute to this workshop, feel free to open an [issue](https://github.com/your_username/Pycamp/issues) or submit a [pull request](https://github.com/your_username/Pycamp/pulls).
+If you find any issues, have suggestions, or want to contribute to this workshop, feel free to open an [issue](https://github.com/your_username/Pycamp/issues) or submit a [pull request](https://github.com/ascendantaditya/Pycamp/pulls).
 
 ## License
 
