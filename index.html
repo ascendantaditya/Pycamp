@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your GitHub Repository</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,7 +60,7 @@
         const username = 'ascendantaditya';
         const repo = 'Pycamp';
 
-        const apiUrl = `https://api.github.com/repos/ascendantaditya/Pycamp/contents`;
+        const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents`;
 
         async function fetchRepoFiles() {
             try {
@@ -43,7 +85,7 @@
         }
 
         function downloadCSV() {
-            // Replace 'your_dataset_file.csv' with the actual path to your CSV file in the repository
+            // Replace 'nba.csv' with the actual name you want for the downloaded CSV file
             const csvUrl = `https://raw.githubusercontent.com/${username}/${repo}/master/nba.csv`;
 
             const link = document.createElement('a');
