@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your GitHub Repository</title>
+</head>
+<body>
+
+    <h1>Your GitHub Repository Files</h1>
+
+    <ul id="fileList"></ul>
+
+    <button onclick="downloadCSV()">Download CSV</button>
+
+    <script>
+        // Replace 'ascendantaditya' and 'Pycamp' with your GitHub username and repository name
+        const username = 'ascendantaditya';
+        const repo = 'Pycamp';
+
+        const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents`;
+
+        async function fetchRepoFiles() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                const fileList = document.getElementById('fileList');
+
+                data.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+
+                    link.href = file.html_url;
+                    link.textContent = file.name;
+
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Error fetching repository files:', error);
+            }
+        }
+
+        function downloadCSV() {
+            // Replace 'your_dataset_file.csv' with the actual path to your CSV file in the repository
+            const csvUrl = `https://raw.githubusercontent.com/${username}/${repo}/master/your_dataset_file.csv`;
+
+            const link = document.createElement('a');
+            link.href = csvUrl;
+            link.download = 'your_dataset_file.csv';
+            link.click();
+        }
+
+        fetchRepoFiles();
+    </script>
+
+</body>
+</html>
