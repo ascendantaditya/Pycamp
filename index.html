@@ -18,7 +18,7 @@
         const username = 'ascendantaditya';
         const repo = 'Pycamp';
 
-        const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents`;
+        const apiUrl = `https://api.github.com/repos/ascendantaditya/Pycamp/contents`;
 
         async function fetchRepoFiles() {
             try {
@@ -44,7 +44,7 @@
 
         function downloadCSV() {
             // Replace 'your_dataset_file.csv' with the actual path to your CSV file in the repository
-            const csvUrl = `https://raw.githubusercontent.com/${username}/${repo}/master/your_dataset_file.csv`;
+            const csvUrl = `https://raw.githubusercontent.com/${username}/${repo}/master/nba.csv`;
 
             const link = document.createElement('a');
             link.href = csvUrl;
