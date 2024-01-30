@@ -1,0 +1,7 @@
+# Day-2
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+beautifulsoup4
+pytz
+python-dotenv
